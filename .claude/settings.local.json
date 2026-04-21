@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(file \"D:/Portfolio/Design/hi-fi\"/*)",
+      "Bash(npm install *)",
+      "Bash(npm run *)"
+    ]
+  }
+}

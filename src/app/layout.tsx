@@ -1,41 +1,45 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Poppins, JetBrains_Mono } from "next/font/google";
+import { Poppins, Playfair_Display, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  style: ["normal", "italic"],
-});
+import Cursor from "@/components/Cursor";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const poppins = Poppins({
-  variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
+  display: "swap",
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-playfair",
+  display: "swap",
 });
 
 const jetbrains = JetBrains_Mono({
-  variable: "--font-jetbrains",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "700"],
+  weight: ["300", "400", "500"],
+  variable: "--font-jetbrains",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Udith Gunasekara — Editorial Portfolio",
-  description: "Software Engineer · Designer · Researcher",
+  title: "Udith Gunasekara — Engineer & Designer",
+  description:
+    "Udith Gunasekara — software engineer and designer. Making a better world, one commit at a time.",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${playfair.variable} ${poppins.variable} ${jetbrains.variable} h-full antialiased font-poppins`}
-    >
-      <body className="min-h-full flex flex-col bg-paper text-ink">{children}</body>
+    <html lang="en" className={`${poppins.variable} ${playfair.variable} ${jetbrains.variable}`}>
+      <body>
+        <Cursor />
+        <ScrollProgress />
+        {children}
+      </body>
     </html>
   );
 }

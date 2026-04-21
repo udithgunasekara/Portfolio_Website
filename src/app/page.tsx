@@ -1,44 +1,63 @@
-'use client';
+"use client";
 
-import { useScroll, useTransform, motion } from 'framer-motion';
-import { useRef } from 'react';
-import Nav from '@/components/Nav';
-import CoverScreen from '@/components/CoverScreen';
-import HeroScreen from '@/components/HeroScreen';
+import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import { useRef } from "react";
+import Nav from "@/components/Nav";
+import CoverScreen from "@/components/CoverScreen";
+import Masthead from "@/components/Masthead";
+import Hero from "@/components/Hero";
+import Marquee from "@/components/Marquee";
+import About from "@/components/About";
+import Work from "@/components/Work";
+import PullQuote from "@/components/PullQuote";
+import Stack from "@/components/Stack";
+import Writing from "@/components/Writing";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const coverRef = useRef<HTMLDivElement>(null);
+  const reduce = useReducedMotion();
+
   const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"]
+    target: coverRef,
+    offset: ["start start", "end start"],
   });
 
-  // Fade out Cover and scale down slightly as user scrolls down
-  const coverOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const coverScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.95]);
-  const coverY = useTransform(scrollYProgress, [0, 0.5], ["0%", "-10%"]);
+  const rawOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
+  const rawScale = useTransform(scrollYProgress, [0, 0.7], [1, 0.95]);
+  const rawY = useTransform(scrollYProgress, [0, 0.7], ["0%", "-10%"]);
+
+  const coverOpacity = reduce ? 1 : rawOpacity;
+  const coverScale = reduce ? 1 : rawScale;
+  const coverY = reduce ? "0%" : rawY;
 
   return (
-    <main className="relative min-h-[200vh]" ref={containerRef}>
+    <>
       <Nav />
-      <motion.div 
-        className="sticky top-0 h-screen w-full overflow-hidden origin-top z-10 bg-paper"
-        style={{ opacity: coverOpacity, scale: coverScale, y: coverY }}
-      >
-        <CoverScreen />
-      </motion.div>
 
-      <div className="relative z-20 bg-paper shadow-[0_-20px_50px_rgba(0,0,0,0.05)] border-t border-rule" style={{ marginTop: "-1px" }}>
-        <HeroScreen />
+      {/* Cover intro: sticky, scroll-fade into the page */}
+      <div ref={coverRef} className="relative h-[180vh]" id="top">
+        <motion.div
+          className="sticky top-0 h-screen w-full overflow-hidden origin-top z-10 bg-paper"
+          style={{ opacity: coverOpacity, scale: coverScale, y: coverY }}
+        >
+          <CoverScreen />
+        </motion.div>
       </div>
-      
-      {/* Footer / Composer bar as requested in the design */}
-      <div className="max-w-[1200px] mx-auto px-11 pb-20 bg-paper relative z-20">
-        <div className="mt-10 py-[18px] px-0 border-t border-dashed border-ink font-jetbrains text-[10.5px] text-muted tracking-[.1em] uppercase flex justify-between flex-wrap gap-3">
-          <span>udith gunasekara · editorial direction · engineer handoff</span>
-          <span>scroll transition active · hero section displayed</span>
-        </div>
-      </div>
-    </main>
+
+      <main className="relative z-20 bg-paper">
+        <Masthead />
+        <Hero />
+        <Marquee />
+        <About />
+        <Work />
+        <PullQuote />
+        <Stack />
+        <Writing />
+        <Contact />
+        <Footer />
+      </main>
+    </>
   );
 }
