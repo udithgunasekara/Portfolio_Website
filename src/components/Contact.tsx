@@ -12,8 +12,8 @@ export default function Contact() {
           <b>something.</b>
         </h2>
       </Reveal>
-      <a className="email" href="mailto:hello@udithg.dev">
-        hello@udithg.dev
+      <a className="email" href="mailto:hello@udithg.me">
+        hello@udithg.me
       </a>
       <div className="socials">
         <a href="#">LinkedIn ↗</a>
