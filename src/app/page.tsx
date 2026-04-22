@@ -19,34 +19,37 @@ export default function Home() {
   const coverRef = useRef<HTMLDivElement>(null);
   const reduce = useReducedMotion();
 
+  // Progress 0 when cover top aligns with viewport top;
+  // progress 1 when cover bottom aligns with viewport top (i.e. cover fully scrolled past).
   const { scrollYProgress } = useScroll({
     target: coverRef,
     offset: ["start start", "end start"],
   });
 
-  const rawOpacity = useTransform(scrollYProgress, [0, 0.7], [1, 0]);
-  const rawScale = useTransform(scrollYProgress, [0, 0.7], [1, 0.95]);
-  const rawY = useTransform(scrollYProgress, [0, 0.7], ["0%", "-10%"]);
+  // Extra parallax lift so the cover feels like it's being pulled up slightly faster
+  // than the page scroll, revealing the Home page underneath.
+  const rawY = useTransform(scrollYProgress, [0, 1], ["0%", "-25%"]);
+  const rawOpacity = useTransform(scrollYProgress, [0, 0.85], [1, 0]);
 
-  const coverOpacity = reduce ? 1 : rawOpacity;
-  const coverScale = reduce ? 1 : rawScale;
   const coverY = reduce ? "0%" : rawY;
+  const coverOpacity = reduce ? 1 : rawOpacity;
 
   return (
     <>
       <Nav />
 
-      {/* Cover intro: sticky, scroll-fade into the page */}
-      <div ref={coverRef} className="relative h-[180vh]" id="top">
+      {/* Cover intro — full viewport on load; slides up + fades as the user scrolls */}
+      <section ref={coverRef} className="relative h-screen overflow-hidden bg-paper" id="top">
         <motion.div
-          className="sticky top-0 h-screen w-full overflow-hidden origin-top z-10 bg-paper"
-          style={{ opacity: coverOpacity, scale: coverScale, y: coverY }}
+          className="h-full w-full"
+          style={{ y: coverY, opacity: coverOpacity }}
         >
           <CoverScreen />
         </motion.div>
-      </div>
+      </section>
 
-      <main className="relative z-20 bg-paper">
+      {/* Home page starts here — Masthead + Hero + rest of the issue */}
+      <main className="relative bg-paper">
         <Masthead />
         <Hero />
         <Marquee />
