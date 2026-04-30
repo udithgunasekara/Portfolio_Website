@@ -1,3 +1,5 @@
+import Image from "next/image";
+import portraitImg from "@/app/portrait.png";
 import Reveal from "./Reveal";
 import SectionHeader from "./SectionHeader";
 
@@ -41,7 +43,9 @@ export default function About() {
 
         <Reveal delay={2}>
           <aside>
-            <div className="portrait" />
+            <div className="portrait">
+              <Image src={portraitImg} alt="Portrait of Udith Gunasekara" fill style={{ objectFit: "cover" }} />
+            </div>
             <div className="cap">Fig. 001 — portrait, 2026</div>
             <div className="traits">
               <div className="k">Traits</div>
