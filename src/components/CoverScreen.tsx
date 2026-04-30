@@ -63,8 +63,8 @@ export default function CoverScreen({ onDone }: { onDone: () => void }) {
       initial={{ y: 0 }}
       className="fixed inset-0 z-50 bg-paper overflow-hidden"
     >
-      <div className="w-full min-h-screen flex flex-col pt-12 px-11 pb-20 max-w-[1200px] mx-auto relative">
-        <div className="border-y border-ink py-5 flex justify-between">
+      <div className="w-full min-h-screen flex flex-col pt-8 sm:pt-12 px-5 sm:px-11 pb-12 sm:pb-20 max-w-[1200px] mx-auto relative">
+        <div className="border-y border-ink py-3 sm:py-5 flex justify-between">
           <span className="font-jetbrains text-[11px] tracking-[.16em] uppercase">
             Issue №04 — Engineer &amp; Designer
           </span>
@@ -73,7 +73,7 @@ export default function CoverScreen({ onDone }: { onDone: () => void }) {
           </span>
         </div>
 
-        <div className="mt-10 relative text-center">
+        <div className="mt-6 sm:mt-10 relative text-center">
           <div className="font-jetbrains text-[11px] text-muted tracking-[.22em] uppercase">
             — The portfolio of —
           </div>
@@ -83,7 +83,7 @@ export default function CoverScreen({ onDone }: { onDone: () => void }) {
               variants={container}
               initial="hidden"
               animate="show"
-              className="font-playfair text-[clamp(72px,11vw,156px)] font-black my-3 leading-[0.88] tracking-[-0.03em]"
+              className="font-playfair text-[clamp(44px,11vw,156px)] font-black my-3 leading-[0.88] tracking-[-0.03em]"
             >
               <motion.span variants={item} className="inline-block">
                 Udith
@@ -94,7 +94,7 @@ export default function CoverScreen({ onDone }: { onDone: () => void }) {
               </motion.em>
             </motion.h1>
           ) : (
-            <h1 className="font-playfair text-[clamp(72px,11vw,156px)] font-black my-3 leading-[0.88] tracking-[-0.03em]">
+            <h1 className="font-playfair text-[clamp(44px,11vw,156px)] font-black my-3 leading-[0.88] tracking-[-0.03em]">
               <span className="inline-block">Udith</span>
               <br />
               <em className="font-normal italic inline-block">Gunasekara</em>
@@ -113,7 +113,7 @@ export default function CoverScreen({ onDone }: { onDone: () => void }) {
           </span>
         </div>
 
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-8 border-t border-ink pt-7">
+        <div className="mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-4 gap-6 sm:gap-8 border-t border-ink pt-5 sm:pt-7">
           <div className="md:col-span-1">
             <div className="font-jetbrains text-[10px] tracking-[.14em] uppercase text-muted">
               Feature
@@ -129,7 +129,7 @@ export default function CoverScreen({ onDone }: { onDone: () => void }) {
               className="m-0 text-[15px] leading-[1.7] md:columns-2 gap-7"
               style={{ columnRule: "1px solid var(--rule)" }}
             >
-              <span className="font-playfair font-black text-[54px] float-left leading-[0.9] mr-2.5 mt-1">
+              <span className="font-playfair font-black text-[36px] sm:text-[54px] float-left leading-[0.9] mr-2.5 mt-1">
                 I
               </span>
               sit between engineering and design — shipping full-stack products at eChannelling,

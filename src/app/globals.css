@@ -420,6 +420,7 @@ body.hov .cursor-dot { opacity: 0; }
 /* ============ RESPONSIVE ============ */
 @media (max-width: 1024px) {
   .nav, .mast, .band { padding-left: 24px; padding-right: 24px; }
+  .hero { padding-left: 24px; padding-right: 24px; }
   .about, .stack-wrap { grid-template-columns: 1fr; gap: 32px; }
   .work-row { grid-template-columns: 60px 1fr 60px; }
   .work-row .desc, .work-row .year { display: none; }
@@ -427,6 +428,18 @@ body.hov .cursor-dot { opacity: 0; }
   .exp-row { grid-template-columns: 1fr; }
   .nav-links { display: none; }
   .hero .strip { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .nav { padding: 14px 20px; }
+  .nav.scrolled { padding: 12px 20px; }
+  .nav-right { display: none; }
+  .mast, .band { padding-left: 20px; padding-right: 20px; }
+  .hero { padding: 36px 20px 80px; }
+  .hero h1 { font-size: clamp(44px, 12vw, 100px); }
+  .hero .kicker { font-size: 11px; letter-spacing: .18em; }
+  .hero .ctas { flex-wrap: wrap; justify-content: center; }
+  .hero .strip { grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 40px; }
+  .site-footer { padding-left: 20px; padding-right: 20px; flex-direction: column; gap: 8px; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
