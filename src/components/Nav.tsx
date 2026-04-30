@@ -11,7 +11,7 @@ const LINKS = [
   { to: "contact", label: "Contact" },
 ];
 
-export default function Nav() {
+export default function Nav({ hidden = false }: { hidden?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
   const [activeId, setActiveId] = useState<string | null>(null);
 
@@ -40,7 +40,15 @@ export default function Nav() {
   }, []);
 
   return (
-    <header className={clsx("nav", scrolled && "scrolled")} id="nav">
+    <header
+      className={clsx(
+        "nav",
+        scrolled && "scrolled",
+        hidden ? "opacity-0 pointer-events-none" : "opacity-100",
+        "transition-opacity duration-500",
+      )}
+      id="nav"
+    >
       <a href="#top" className="logo">
         UDITH.G<em>.</em>
       </a>
