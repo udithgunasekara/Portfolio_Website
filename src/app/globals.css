@@ -321,8 +321,8 @@ body.hov .cursor-dot { opacity: 0; }
   font-family: var(--font-jetbrains); font-size: 11px; letter-spacing: .16em;
   text-transform: uppercase; color: var(--muted);
 }
-.exp-row .where { font-family: var(--font-playfair); font-size: 22px; font-weight: 700; }
-.exp-row .role {
+.exp-row .position { font-family: var(--font-playfair); font-size: 22px; font-weight: 700; }
+.exp-row .company {
   font-family: var(--font-playfair); font-size: 15px; font-style: italic;
   color: var(--ink-2); margin-top: 4px;
 }

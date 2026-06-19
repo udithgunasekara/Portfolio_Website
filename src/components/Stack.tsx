@@ -37,12 +37,12 @@ export default function Stack() {
         </div>
         <div>
           {EXPERIENCE.map((e) => (
-            <Reveal key={e.where}>
+            <Reveal key={e.when}>
               <div className="exp-row">
                 <div className="when">{e.when}</div>
                 <div>
-                  <div className="where">{e.where}</div>
-                  <div className="role">{e.role}</div>
+                  <div className="position">{e.role}</div>
+                  <div className="company">{e.where}</div>
                 </div>
                 <div>
                   <div className="detail">{e.detail}</div>
