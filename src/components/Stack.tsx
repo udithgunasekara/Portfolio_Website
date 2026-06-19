@@ -32,7 +32,7 @@ export default function Stack() {
             <h2>Where I&rsquo;ve worked.</h2>
           </Reveal>
           <Reveal delay={2} className="r">
-            2 roles
+            3 roles
           </Reveal>
         </div>
         <div>

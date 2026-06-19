@@ -29,12 +29,20 @@ export const PROJECTS: Project[] = [
 
 export const EXPERIENCE: ExperienceItem[] = [
   {
-    when: "May 2025 to Now",
+    when: "Nov 2025 to Now",
     where: "eChannelling PLC",
     role: "Associate Software Engineer",
     detail:
-      "Promoted from intern to Associate Software Engineer. I now lead feature development across the Hospital Client and Hospital Admin modules, coordinating other developers and running release planning through to production. I built the WebXPay payment-gateway integration that now processes around 500,000 appointment payments a month, and added an OTP verification step, since adopted by stakeholders as a key control, that protects refund and cancellation flows from fraud. As an intern I shipped the Doctors REST APIs (MVC + Repository) and the patient booking and queue-visibility features for a platform 50+ hospitals run on.",
-    stack: ["Java", "Spring Boot", "React Native", "JavaScript", "Oracle", "PostgreSQL"],
+      "I lead feature development across the Hospital Client and Hospital Admin modules, coordinating other developers and running release planning through to production. I built the WebXPay payment-gateway integration that now processes around 500,000 appointment payments a month, and added an OTP verification step, since adopted by stakeholders as a key control, that protects refund and cancellation flows from fraud. I also spend a fair bit of time tuning web API performance so the app stays quick under load.",
+    stack: ["Java", "Spring Boot", "JavaScript", "Oracle", "PostgreSQL"],
+  },
+  {
+    when: "May 2025 to Nov 2025",
+    where: "eChannelling PLC",
+    role: "Software Engineer Intern",
+    detail:
+      "Built and shipped full-stack features for the production SaaS platform that 50+ hospitals run on, working in Java, Spring Boot, and React Native on an Agile-Scrum team. Wrote the backend REST APIs for the Doctors application using MVC and Repository patterns to drive appointment scheduling on a multi-tenant platform, and built the patient-facing booking and queue-visibility features in the React Native mobile app.",
+    stack: ["Java", "Spring Boot", "React Native", "MVC"],
   },
   {
     when: "Jan 2025 to Jan 2026",
