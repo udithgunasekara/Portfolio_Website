@@ -13,7 +13,7 @@ export default function About() {
             <div className="k">Who</div>
             <div className="v big">Udith Gunasekara</div>
             <div className="k">Currently</div>
-            <div className="v">Software Engineer Intern, eChannelling PLC.</div>
+            <div className="v">Associate Software Engineer, eChannelling PLC.</div>
             <div className="k">Interests</div>
             <div className="v">LLMs · Microservices · Design Systems · Mobile.</div>
           </aside>
