@@ -27,9 +27,9 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Udith Gunasekara — Engineer & Designer",
+  title: "Udith Gunasekara · Engineer & Designer",
   description:
-    "Udith Gunasekara — software engineer and designer. Making a better world, one commit at a time.",
+    "Udith Gunasekara, a software engineer and designer. Full-stack products, LLM research, and interfaces that get out of the way.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

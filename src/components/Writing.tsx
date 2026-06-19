@@ -9,14 +9,14 @@ export default function Writing() {
       <div className="writing-grid">
         {WRITING.map((w) => (
           <Reveal key={w.title}>
-            <a className="write-card" href="#">
+            <a className="write-card" href={w.href} target="_blank" rel="noreferrer noopener">
               <div className="meta">
                 {w.date} · {w.kicker}
               </div>
               <h3>{w.title}</h3>
               <p>{w.dek}</p>
               <div className="cta">
-                Read the essay <span>→</span>
+                Read on Medium <span>↗</span>
               </div>
             </a>
           </Reveal>

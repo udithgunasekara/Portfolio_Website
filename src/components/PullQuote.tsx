@@ -4,10 +4,10 @@ export default function PullQuote() {
   return (
     <div className="pull">
       <Reveal>
-        <q>Code is a conversation with the future. Design is how it starts.</q>
+        <q>Most of writing good code is just being kind to whoever reads it next, usually you.</q>
       </Reveal>
       <Reveal delay={1} className="att">
-        — U.G., From The Notebook
+        U. G., from the notebook
       </Reveal>
     </div>
   );

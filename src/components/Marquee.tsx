@@ -1,5 +1,5 @@
 const CONTENT_PARTS = [
-  "Making a better world, one commit at a time",
+  "Code you can hand to the next person",
   "Engineer & Designer",
   "Available Q3 2026",
   "Currently shipping @ eChannelling",

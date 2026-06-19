@@ -13,7 +13,7 @@ export default function Hero() {
 
   return (
     <section className={clsx("hero", ready && "ready")} id="hero">
-      <div className="eyebrow">— The portfolio of —</div>
+      <div className="eyebrow">· The portfolio of ·</div>
       <h1>
         <span className="word">
           <span>Udith</span>

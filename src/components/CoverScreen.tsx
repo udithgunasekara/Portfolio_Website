@@ -66,7 +66,7 @@ export default function CoverScreen({ onDone }: { onDone: () => void }) {
       <div className="w-full min-h-screen flex flex-col pt-8 sm:pt-12 px-5 sm:px-11 pb-12 sm:pb-20 max-w-[1200px] mx-auto relative">
         <div className="border-y border-ink py-3 sm:py-5 flex justify-between">
           <span className="font-jetbrains text-[11px] tracking-[.16em] uppercase">
-            Issue №04 — Engineer &amp; Designer
+            Issue №04 · Engineer &amp; Designer
           </span>
           <span className="font-jetbrains text-[11px] tracking-[.16em] uppercase">
             Spring / 2026
@@ -75,7 +75,7 @@ export default function CoverScreen({ onDone }: { onDone: () => void }) {
 
         <div className="mt-6 sm:mt-10 relative text-center">
           <div className="font-jetbrains text-[11px] text-muted tracking-[.22em] uppercase">
-            — The portfolio of —
+            · The portfolio of ·
           </div>
 
           {mounted && !reduce ? (
@@ -119,9 +119,9 @@ export default function CoverScreen({ onDone }: { onDone: () => void }) {
               Feature
             </div>
             <div className="font-bold text-[16px] mt-2 leading-[1.35]">
-              &ldquo;Making a better world, one commit at a time.&rdquo;
+              &ldquo;The parts nobody notices are usually the ones doing the work.&rdquo;
             </div>
-            <div className="font-jetbrains text-[10px] text-muted mt-2.5">— pg. 12</div>
+            <div className="font-jetbrains text-[10px] text-muted mt-2.5">pg. 12</div>
           </div>
 
           <div className="md:col-span-2">
@@ -130,11 +130,11 @@ export default function CoverScreen({ onDone }: { onDone: () => void }) {
               style={{ columnRule: "1px solid var(--rule)" }}
             >
               <span className="font-playfair font-black text-[36px] sm:text-[54px] float-left leading-[0.9] mr-2.5 mt-1">
-                I
+                T
               </span>
-              sit between engineering and design — shipping full-stack products at eChannelling,
-              researching context engineering for LLMs, and designing the things I build. Java, React,
-              Flutter, Python. I think in components. I ship in commits.
+              his issue covers a year of building: a healthcare platform that 50+ hospitals now run
+              on, a final-year research project on context engineering for LLMs, and a few things I
+              designed and shipped on the side. Mostly Java, React, Flutter, and Python.
             </p>
           </div>
 
@@ -143,7 +143,7 @@ export default function CoverScreen({ onDone }: { onDone: () => void }) {
               Inside
             </div>
             <ol className="font-jetbrains text-[11px] pl-4 leading-[2] list-decimal mt-1">
-              <li>Selected Work — 3 pieces</li>
+              <li>Selected Work · 3 pieces</li>
               <li>Notes from MCP research</li>
               <li>On writing Spring microservices</li>
               <li>Talking to Udith · Q&amp;A</li>

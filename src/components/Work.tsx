@@ -44,7 +44,7 @@ function Row({ p }: { p: Project }) {
 export default function Work() {
   return (
     <section className="band" id="work" style={{ borderTop: "1px solid var(--ink)" }}>
-      <SectionHeader left="§ 03 / Index" title="Selected Work." right="2024 — 2026 · 03 entries" />
+      <SectionHeader left="§ 03 / Index" title="Selected Work." right="2024 to 2026 · 03 entries" />
       <div className="work-wrap">
         <div className="work-list">
           {PROJECTS.map((p) => (

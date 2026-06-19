@@ -10,9 +10,9 @@ export default function Stack() {
       <div className="stack-wrap">
         <Reveal>
           <p>
-            Each tool here has been used in production or research within the last 12 months. No
-            language or library is here for decoration — every entry is one I&rsquo;ve shipped
-            something with.
+            Everything on this list is something I&rsquo;ve actually used in the last year, either at
+            work or in my research. Nothing&rsquo;s here to pad the list out. If it made the cut,
+            I&rsquo;ve shipped something real with it.
           </p>
         </Reveal>
         <Reveal delay={1} className="stack-river">

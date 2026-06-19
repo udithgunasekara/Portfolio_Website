@@ -16,9 +16,15 @@ export default function Contact() {
         hello@udithg.me
       </a>
       <div className="socials">
-        <a href="#">LinkedIn ↗</a>
-        <a href="#">GitHub ↗</a>
-        <a href="#">Medium ↗</a>
+        <a href="https://www.linkedin.com/in/udith-gunasekara/" target="_blank" rel="noreferrer noopener">
+          LinkedIn ↗
+        </a>
+        <a href="https://github.com/udithgunasekara" target="_blank" rel="noreferrer noopener">
+          GitHub ↗
+        </a>
+        <a href="https://medium.com/@udithgunasekara7" target="_blank" rel="noreferrer noopener">
+          Medium ↗
+        </a>
       </div>
     </section>
   );

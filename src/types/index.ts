@@ -20,4 +20,5 @@ export type WritingItem = {
   kicker: string;
   title: string;
   dek: string;
+  href: string;
 };
