@@ -5,6 +5,7 @@ export type Project = {
   kind: string;
   desc: string;
   color: string;
+  link?: string;
 };
 
 export type ExperienceItem = {

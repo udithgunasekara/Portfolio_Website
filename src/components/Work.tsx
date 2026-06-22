@@ -18,7 +18,13 @@ function Row({ p }: { p: Project }) {
   };
 
   return (
-    <a className="work-row" href="#" data-num={p.num} onMouseMove={onMove}>
+    <a
+      className="work-row"
+      href={p.link ?? "#"}
+      {...(p.link ? { target: "_blank", rel: "noreferrer noopener" } : {})}
+      data-num={p.num}
+      onMouseMove={onMove}
+    >
       <div
         ref={imgRef}
         className="hover-img"
@@ -44,7 +50,7 @@ function Row({ p }: { p: Project }) {
 export default function Work() {
   return (
     <section className="band" id="work" style={{ borderTop: "1px solid var(--ink)" }}>
-      <SectionHeader left="§ 03 / Index" title="Selected Work." right="2024 to 2026 · 03 entries" />
+      <SectionHeader left="§ 03 / Index" title="Selected Work." right="2024 to 2025 · 08 entries" />
       <div className="work-wrap">
         <div className="work-list">
           {PROJECTS.map((p) => (
